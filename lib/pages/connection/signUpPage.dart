@@ -37,7 +37,7 @@ class SignUpPage extends ConsumerWidget {
             content: Text('Welcome ${_user.text}'),
           );
           ScaffoldMessenger.of(context).showSnackBar(snackBar);
-          context.goNamed("countries-list");
+          context.pushNamed("countries-list");
         }
       } else {
         await prefs.setString(
@@ -51,7 +51,7 @@ class SignUpPage extends ConsumerWidget {
           content: Text('Welcome ${_user.text}'),
         );
         ScaffoldMessenger.of(context).showSnackBar(snackBar);
-        context.goNamed("countries-list");
+        context.pushNamed("countries-list");
       }
     }
   }

@@ -25,11 +25,14 @@ class ConnectionPage extends ConsumerWidget {
           content: Text('Welcome ${_user.text}'),
         );
         ScaffoldMessenger.of(context).showSnackBar(snackBar);
-        context.goNamed("countries-list");
+        context.pushNamed("countries-list");
       } else {
         MyFunct.showErrorMessage(
             "Invalid username or password. Please try again", context);
       }
+    } else {
+      MyFunct.showErrorMessage(
+          "Invalid username or password. Please try again", context);
     }
   }
 
@@ -196,7 +199,7 @@ class ConnectionPage extends ConsumerWidget {
                             fontWeight: FontWeight.w400),
                       ),
                       GestureDetector(
-                        onTap: () => context.goNamed("signe-up"),
+                        onTap: () => context.pushNamed("signe-up"),
                         child: const Text(
                           "Create",
                           style: TextStyle(

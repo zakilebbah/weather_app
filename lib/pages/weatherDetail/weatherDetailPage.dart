@@ -114,7 +114,7 @@ class WeatherDetailPage extends ConsumerWidget {
                                     countries['ALL']![ref
                                             .read(indexProvider.notifier)
                                             .state]
-                                        .CAPITAL,
+                                        .NAME,
                                     style: const TextStyle(
                                       fontSize: 26,
                                       color: Colors.white,

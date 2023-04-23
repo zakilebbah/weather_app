@@ -36,7 +36,7 @@ class CountriesListPage extends ConsumerWidget {
       "CURRENT": [countries[index]],
       "ALL": countries
     };
-    context.goNamed("weather-detail", extra: map00);
+    context.pushNamed("weather-detail", extra: map00);
   }
 
   // I used 2 future providers to separate loading the capitals and the weather.
